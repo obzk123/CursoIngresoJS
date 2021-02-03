@@ -1,6 +1,24 @@
 function mostrar()
 {
-	var destinoIngresado =txtIdDestino.value;
-	alert(destinoIngresado);
+	let destino =txtIdDestino.value;
 
-}//FIN DE LA FUNCIÓN
+	switch(destino)
+	{
+		//Bariloche
+		case "Bariloche": alert("Sur");
+		break;
+
+		//Cataratas
+		case "Cataratas": alert("Este");
+		break;
+
+		//Mar del plata
+		case "Mar del plata": alert("Este");
+		break;
+
+		//Ushuaia
+		case "Ushuaia": alert("Sur");
+		break;
+	}
+
+}
