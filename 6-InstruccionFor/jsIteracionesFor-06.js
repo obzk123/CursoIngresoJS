@@ -1,7 +1,18 @@
 function mostrar()
 {
-	alert("ok");
+	let numero;
+	let i;
+	let pares = 0;
 
+	numero = parseInt(prompt("Ingrese un numero: "));
 
+	for(i = 1; i <= numero; i++)
+	{
+		if(i % 2 == 0)
+		{
+			pares++;
+		}
+	}
 
-}//FIN DE LA FUNCIÓN
+	alert(pares);
+}

@@ -12,6 +12,7 @@ let numeromaximo = 3;
 function comenzar()
 {
     numerorandom = Math.round(Math.random() * (numeromaximo - numerominimo) + numerominimo);
+    alert(numerorandom);
 }
 function piedra()
 {

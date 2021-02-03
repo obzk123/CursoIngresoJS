@@ -1,7 +1,22 @@
 function mostrar()
 {
 
-	alert("ok");
+	let numero;
+	let i;
+	let divisoresencontrados = 0;
 
+	numero = parseInt(prompt("Ingrese un numero: "));
 
-}//FIN DE LA FUNCIÓN
+	for(i = 1; i <= numero; i++)
+	{
+
+		if(numero % i == 0)
+		{
+			divisoresencontrados++;
+		}
+
+	}
+
+	alert(divisoresencontrados);
+
+}
