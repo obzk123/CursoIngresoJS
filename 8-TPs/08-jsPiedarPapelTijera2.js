@@ -1,31 +1,97 @@
-var eleccionMaquina;
-var ContadorDeEmpates=0;
-var ContadorDeGanadas=0;
-var ContadorDePerdidas=0;
+
+
+let eleccionMaquina;
+let ContadorDeEmpates = 0;
+let ContadorDeGanadas = 0;
+let ContadorDePerdidas = 0;
+let numerorandom;
+let numeromaximo = 3;
+let numerominimo = 1;
 
 function comenzar()
 {
-	//Genero el número RANDOM entre 1 y 3
-	 	
+	numerorandom = Math.round(Math.random() * (numeromaximo - numerominimo) + numerominimo);
+	
+	alert(numerorandom);
 
+}
 
-
-}//FIN DE LA FUNCIÓN
 function piedra()
 {
-	
+	let eleccionMaquina = 1;
 
-}//FIN DE LA FUNCIÓN
+    if(numerorandom == eleccionMaquina)
+    {
+		alert("Empate");
+		ContadorDeEmpates++;
+    }
+
+    switch(numerorandom)
+    {
+		case 2: alert("Perdi");
+		ContadorDePerdidas++;
+        break;
+		case 3: alert("Gane");
+		ContadorDeGanadas++;
+        break;
+	}
+
+	mostrarResultado();
+
+}
+
+
 function papel()
 {
+    eleccionMaquina = 2;
 
-}//FIN DE LA FUNCIÓN
+    if(numerorandom == eleccionMaquina)
+    {
+		alert("Empate");
+		ContadorDeEmpates++;
+    }
+
+    switch(numerorandom)
+    {
+		case 1: alert("Gane");
+		ContadorDeGanadas++;
+        break;
+		case 3: alert("Perdi");
+		ContadorDePerdidas++;
+        break;
+	}
+
+	mostrarResultado();
+	
+}
 function tijera()
 {
-	
-}//FIN DE LA FUNCIÓN
+    eleccionMaquina = 3;
+
+    if(numerorandom == eleccionMaquina)
+    {
+		alert("Empate");
+		ContadorDeEmpates++;
+    }
+
+    switch(numerorandom)
+    {
+		case 1: alert("Perdi");
+		ContadorDePerdidas++;
+        break;
+		case 2: alert("Gane");
+		ContadorDeGanadas++;
+        break;
+	}
+
+	mostrarResultado();
+}
+
+
 
 function mostrarResultado()
 {
-
+	txtIdGanadas.value = ContadorDeGanadas;
+	txtIdPerdidas.value = ContadorDePerdidas;
+	txtIdEmpatadas.value = ContadorDeEmpates;
 }

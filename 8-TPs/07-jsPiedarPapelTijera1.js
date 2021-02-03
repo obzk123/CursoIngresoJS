@@ -4,26 +4,67 @@ siendo 1 para “piedra”, el 2 para “papel” y 3 para “tijera”.
 El jugador seleccionará una imagen correspondiente 
 a su opción  y le informaremos si ganó, empató o perdió.
 */
-var eleccionMaquina;
+let eleccionMaquina;
+let numerorandom;
+let numerominimo = 1;
+let numeromaximo = 3;
 
 function comenzar()
 {
-	
-
-
-}//FIN DE LA FUNCIÓN
+    numerorandom = Math.round(Math.random() * (numeromaximo - numerominimo) + numerominimo);
+}
 function piedra()
 {
-	
+    let eleccionMaquina = 1;
 
-}//FIN DE LA FUNCIÓN
+    if(numerorandom == eleccionMaquina)
+    {
+        alert("Empate");
+    }
+
+    switch(numerorandom)
+    {
+        case 2: alert("Perdi");
+        break;
+        case 3: alert("Gane");
+        break;
+    }
+
+}
 function papel()
 {
+    eleccionMaquina = 2;
+
+    if(numerorandom == eleccionMaquina)
+    {
+        alert("Empate");
+    }
+
+    switch(numerorandom)
+    {
+        case 1: alert("Gane");
+        break;
+        case 3: alert("Perdi");
+        break;
+    }
+
+}
 
 
-}//FIN DE LA FUNCIÓN
 function tijera()
 {
-	
+    eleccionMaquina = 3;
 
-}//FIN DE LA FUNCIÓN
+    if(numerorandom == eleccionMaquina)
+    {
+        alert("Empate");
+    }
+
+    switch(numerorandom)
+    {
+        case 1: alert("Perdi");
+        break;
+        case 2: alert("Gane");
+        break;
+    }
+}
