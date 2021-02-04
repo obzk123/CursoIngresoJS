@@ -111,12 +111,13 @@ function NumerosPrimos()
 {
     let numero = parseInt(txtIdNumero.value);
     let numerosprimos = 0;
+    let i;
     if(numero <= 0)
     {
         alert("Ingrese un numero positivo");
     }
 
-    for(let i = 1; i <= numero; i++)
+    for(i=0; i <= numero; i++)
     {
         if(numero % i == 0)
         {
