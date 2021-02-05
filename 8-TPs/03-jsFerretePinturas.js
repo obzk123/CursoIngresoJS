@@ -7,7 +7,8 @@ function FahrenheitCentigrados ()
     let grados;
     let cuenta;
     
-    grados = parseInt(document.getElementById("txtIdTemperatura").value);
+    grados = (document.getElementById("txtIdTemperatura").value);
+    grados = parseInt(grados);
 
     cuenta = (grados - 32) * (5/9);
 
@@ -21,7 +22,8 @@ function CentigradosFahrenheit ()
     let grados;
     let cuenta;
     
-    grados = parseInt(document.getElementById("txtIdTemperatura").value);
+    grados = (document.getElementById("txtIdTemperatura").value);
+    grados = parseInt(grados);
 
     cuenta = (grados * 9/5) + 32;
 

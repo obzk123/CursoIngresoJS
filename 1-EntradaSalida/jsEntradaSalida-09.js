@@ -8,10 +8,12 @@ function mostrarAumento()
 
 	let importe;
 	let aumento;
+	let total
 
 	importe = parseInt(document.getElementById("txtIdSueldo").value);
+	aumento = parseInt(prompt("Ingrese el aumento: "));
 
-	aumento = importe * 0.10 + importe;
+	total = importe + (importe * aumento) / 100;
 
-	document.getElementById("txtIdResultado").value = aumento;
+	document.getElementById("txtIdResultado").value = total;
 }
