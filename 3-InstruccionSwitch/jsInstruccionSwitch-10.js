@@ -1,16 +1,23 @@
 function mostrar()
 {
-	let estacion =txtIdEstacion.value;
-	let destino =txtIdDestino.value;
+	let estacion;
+	let destino;
+	let mensaje;
+
+	estacion = document.getElementById("txtIdEstacion").value;
+	destino = document.getElementById("txtIdDestino").value;
 	
 	switch(estacion)
 	{
 		case "Invierno":
 			switch(destino)
 			{
-				case "Bariloche": alert("Se viaja");
+				case "Bariloche": 
+					mensaje = "se viaja";
 				break;
-				default: alert("No se viaja");
+
+				default: 
+					mensaje = "No se viaja";
 				break;
 			}
 		break;
@@ -19,9 +26,12 @@ function mostrar()
 			switch(destino)
 			{
 				case "Mar del plata":
-				case "Cataratas": alert("Se viaja");
+				case "Cataratas": 
+					mensaje = "se viaja";
 				break;
-				default: alert("No se viaja");
+
+				default: 
+					mensaje = "no se viaja";
 				break;
 			}
 		break;
@@ -29,7 +39,8 @@ function mostrar()
 		case "Otoño":
 			switch(destino)
 			{
-				default: alert("Se viaja");
+				default: 
+					mensaje = "se viaja";
 				break;
 			}
 		break;
@@ -37,13 +48,15 @@ function mostrar()
 		case "Primavera":
 			switch(destino)
 			{
-				case "Bariloche": alert("No se viaja");
+				case "Bariloche": 
+					mensaje = "no se viaja";
 				break;
-				default: alert("Se viaja");
+				default: 
+					mensaje = "se viaja";
+				break;
 			}
-
 	}
 
-
+	alert(mensaje);
 
 }

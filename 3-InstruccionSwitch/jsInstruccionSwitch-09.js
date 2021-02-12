@@ -1,67 +1,78 @@
 function mostrar()
 {
-	let estacion = txtIdEstacion.value;
-	let destino = txtIdDestino.value;
+	//Declaro varibles
+	let estacion;
+	let destino;
 	let precio = 15000;
-	let total;
+	let total = 0;
+	let descuento = 0;
+	let aumento = 0;
 
+	//Cargo el dato del usuario a la variable
+	estacion = document.getElementById("txtIdEstacion").value;
+	destino = document.getElementById("txtIdDestino").value;
+
+	//Creo un switch que abarque las estaciones del año
 	switch(estacion)
 	{
+
+		//En el caso de invierno
 		case "Invierno": 
 			switch(destino)
 			{
 				case "Bariloche": 
-				total = precio + (precio * 0.20);
-				alert("El precio final es: $" + total + " pesos");
-				break;
-
-				case "Cataratas":
-				case "Cordoba":
-				total = precio - (precio * 0.10);
-				alert("El precio final es: $" + total + " pesos");
+					aumento = 0.20;
 				break;
 
 				case "Mar del plata":
-				total = precio - (precio * 0.20);
-				alert("El precio final es: $" + total + " pesos");
+					descuento = 0.20;
+
+				break;
+
+				default:
+					descuento = 0.10;
 				break;
 			}
 		break;
 		
+		//En el caso de verano
 		case "Verano":
 			switch(destino)
 			{
 				case "Bariloche":
-				case "Mar del plata": 
-				total = precio - (precio * 0.20);
-				alert("El precio final es: $" + total + " pesos");
+					descuento = 0.20;
 				break;
 
-				case "Cataratas":
-				case "Cordoba":
-				total = precio - (precio * 0.10);
-				alert("El precio final es: $" + total + " pesos");
+				case "Mar del plata": 
+					aumento = 0.20;
+				break;
+
+				default:
+					aumento = 0.10;
 				break;
 			}
+
 		break;
 
+		//En el caso de Otoño y Primavera
 		case "Otoño":
 		case "Primavera":
 			switch(destino)
 				{
-					case "Bariloche":
-					case "Cataratas":
-					case "Mar del plata":
-					total = precio + (precio * 0.10);
-					alert("El precio final es: $" + total + " pesos");
-					break;
-	
 					case "Cordoba":
-					alert("El precio final es: $" + precio + " pesos");
+					break;
+					
+					default:
+						aumento = 0.10;
 					break;
 				}
 			break;
 	}
 
+	//Calculo el total
+	total = (precio) - (precio * descuento) + (precio * aumento);
+
+	//Muestro por pantalla
+	alert("El precio total es de $" + total);
 
 }

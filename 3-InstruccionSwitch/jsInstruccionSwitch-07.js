@@ -1,6 +1,8 @@
 function mostrar()
 {
-	let destino =txtIdDestino.value;
+	let destino;
+
+	destino = document.getElementById("txtIdDestino").value;
 
 	switch(destino)
 	{
@@ -20,5 +22,4 @@ function mostrar()
 		case "Ushuaia": alert("Sur");
 		break;
 	}
-
 }

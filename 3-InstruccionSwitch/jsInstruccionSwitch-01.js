@@ -1,7 +1,9 @@
 function mostrar()
 {
 
-	let mes = txtIdMes.value;
+	let mes;
+
+	mes = document.getElementById("txtIdMes").value;
 
 	switch(mes)
 	{

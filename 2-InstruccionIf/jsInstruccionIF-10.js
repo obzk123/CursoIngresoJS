@@ -1,23 +1,29 @@
 function mostrar()
 {
-	//Genero el número RANDOM entre 1 y 10 
-	let numero;
-	const minimo = 1;
-	const maximo = 10;
+	//Declaro variables
+	let nota;
+	minimo = 1;
+	maximo = 10;
+	let mensaje;
 
-	numero = Math.round(Math.random() * (maximo - minimo) + minimo);
+	//Genero el numero Random entre 1 y 10
+	nota = Math.round(Math.random() * (maximo - minimo) + minimo);
 
-	if(numero >= 9)
+	//Pregunto si es mayor a 8, luego mayor a 4 y por ultimo lo tomo de descarte
+	if(nota > 8)
 	{
-		alert("EXCELENTE " + numero);
+		mensaje = "EXCELENTE " + nota;
 
 	}else{
-		if(numero > 4)
+		if(nota > 4)
 		{
-			alert("APROBO " + numero);
+			mensaje = "APROBO " + nota;
 		}else{
-			alert("Vamos, la proxima se puede " + numero);
+
+			mensaje = "Vamos, la proxima se puede " + nota;
 		}
 	}
+
+	alert(mensaje);
 
 }//FIN DE LA FUNCIÓN

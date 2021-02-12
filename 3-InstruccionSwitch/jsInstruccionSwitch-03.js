@@ -1,6 +1,8 @@
 function mostrar()
 {
-	let mes =txtIdMes.value;
+	let mes;
+
+	mes = document.getElementById("txtIdMes").value;
 	
 
 
@@ -10,8 +12,7 @@ function mostrar()
 		break;
 
 		default: alert("Este mes tiene 30 o más días");
+		break;
 	}
 	
-
-
 }

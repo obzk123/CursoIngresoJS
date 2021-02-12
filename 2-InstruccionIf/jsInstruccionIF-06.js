@@ -1,11 +1,16 @@
 function mostrar()
 {
-	//tomo la edad  
+	//Declaro la variable edad
 	let edad;
 
-	edad = parseInt(document.getElementById("txtIdEdad").value);
+	//Le cargo el valor
+	edad = (document.getElementById("txtIdEdad").value);
 
-	if(edad >= 18)
+	//La convierto en entero
+	edad = parseInt(edad);
+
+	//Verifico en cada caso
+	if(edad > 17)
 	{
 		alert("Es mayor de edad")
 	}else{

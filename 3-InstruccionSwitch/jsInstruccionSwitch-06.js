@@ -1,6 +1,8 @@
 function mostrar()
 {
-	let hora =txtIdHora.value;
+	let hora;
+
+	hora = document.getElementById("txtIdHora").value;
 	
 	switch(hora)
 	{
@@ -24,7 +26,6 @@ function mostrar()
 		break;
 
 		//Noche
-
 		case "20":
 		case "21":
 		case "22":

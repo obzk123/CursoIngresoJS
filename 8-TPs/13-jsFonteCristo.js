@@ -109,20 +109,29 @@ function VerificarPrimo()
 //LISTO
 function NumerosPrimos()
 {
-    let numero = parseInt(txtIdNumero.value);
+    let numero;
     let numerosprimos = 0;
     let i;
+    let contador = 0;
+
+    numero = document.getElementById("txtIdNumero").value;
+    numero = parseInt(numero);
+
     if(numero <= 0)
     {
         alert("Ingrese un numero positivo");
-    }
-
-    for(i=0; i <= numero; i++)
+    }else
+    
     {
-        if(numero % i == 0)
+
+        for(i = 0; i < numero; i++)
         {
-            numerosprimos++;
+            if(numero % i == 0)
+            {
+                numerosprimos++;
+            }
         }
+
     }
 
     alert("La cantidad de numeros primos del 0 al " + numero + " son " + numerosprimos);
